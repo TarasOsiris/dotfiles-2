@@ -30,3 +30,9 @@ ln -s $SCRIPTPATH/.gitconfig $HOME/.gitconfig
 
 rm -f $HOME/.gitignored
 ln -s $SCRIPTPATH/.gitignored $HOME/.gitignored
+
+# Config directory
+[ ! -d $HOME/.config ] && mkdir $HOME/.config
+
+rm -f $HOME/.config/yakuakerc
+ln -s $SCRIPTPATH/.config/yakuakerc $HOME/.config/yakuakerc
