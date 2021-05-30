@@ -20,7 +20,7 @@ echo "Script folder: $SCRIPTPATH"
 cd $SCRIPTPATH
 
 rm -f $HOME/.vimrc
-ln -s $SCRIPTPATH/.vimrc $HOME/.vimrc
+ln -s $SCRIPTPATH/init.vim $HOME/.vimrc
 
 rm -f $HOME/.zshrc
 ln -s $SCRIPTPATH/.zshrc $HOME/.zshrc
