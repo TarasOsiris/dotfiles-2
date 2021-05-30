@@ -23,4 +23,4 @@ rm -f $HOME/.vimrc
 ln -s $SCRIPTPATH/.vimrc $HOME/.vimrc
 
 rm -f $HOME/.zshrc
-ln -s $SCRIPTPATH/.zshrc $HOME/.ideavimrc
+ln -s $SCRIPTPATH/.zshrc $HOME/.zshrc
