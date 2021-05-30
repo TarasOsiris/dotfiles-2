@@ -1,0 +1,7 @@
+[user]
+	email = leskiv.taras@gmail.com
+	name = Taras Leskiv
+[pull]
+	rebase = false
+[core]
+	excludesfile = /Users/taras/.gitignored

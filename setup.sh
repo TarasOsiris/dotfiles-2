@@ -24,3 +24,9 @@ ln -s $SCRIPTPATH/.vimrc $HOME/.vimrc
 
 rm -f $HOME/.zshrc
 ln -s $SCRIPTPATH/.zshrc $HOME/.zshrc
+
+rm -f $HOME/.gitconfig
+ln -s $SCRIPTPATH/.gitconfig $HOME/.gitconfig
+
+rm -f $HOME/.gitignored
+ln -s $SCRIPTPATH/.gitignored $HOME/.gitignored
