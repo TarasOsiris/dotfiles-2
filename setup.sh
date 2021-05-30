@@ -7,7 +7,7 @@ git config --global user.email "leskiv.taras@gmail.com"
 git config --global user.name "Taras Leskiv"
 
 # core
-sudo pacman -S zsh vim stow --noconfirm
+sudo pacman -S zsh vim neovim htop stow --noconfirm
 
 # oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
