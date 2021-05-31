@@ -15,5 +15,10 @@ fi
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 source $ZSH/oh-my-zsh.sh
+
+# Fuzzy finder
+# CTRL-T - Paste the selected files and directories onto the command-line
+# CTRL-R - Paste the selected command from history onto the command-line
+# ALT-C - cd into the selected directory
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
