@@ -27,12 +27,18 @@ cd $SCRIPTPATH
 # aliases
 touch $HOME/localaliases.sh
 rm -f $HOME/aliases.sh
+
+# Config directory
+[ ! -d $HOME/.config ] && mkdir $HOME/.config
+
 # source this in .zshrc
 ln -s $SCRIPTPATH/aliases.sh $HOME/aliases.sh
 
 rm -f $HOME/.vimrc
 ln -s $SCRIPTPATH/init.vim $HOME/.vimrc
 rm -f $HOME/.config/nvim/init.vim
+
+[ ! -d $HOME/.config/nvim ] && mkdir $HOME/.config/nvim
 ln -s $SCRIPTPATH/init.vim $HOME/.config/nvim/init.vim
 ln -s $SCRIPTPATH/init.vim $HOME/.config/nvim/.ideavimrc
 
@@ -45,8 +51,6 @@ ln -s $SCRIPTPATH/.gitconfig $HOME/.gitconfig
 rm -f $HOME/.gitignored
 ln -s $SCRIPTPATH/.gitignored $HOME/.gitignored
 
-# Config directory
-[ ! -d $HOME/.config ] && mkdir $HOME/.config
 
 rm -f $HOME/.config/yakuakerc
 ln -s $SCRIPTPATH/.config/yakuakerc $HOME/.config/yakuakerc
