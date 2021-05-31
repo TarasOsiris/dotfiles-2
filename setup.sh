@@ -19,6 +19,12 @@ SCRIPTPATH=$(dirname "$SCRIPT")
 echo "Script folder: $SCRIPTPATH"
 cd $SCRIPTPATH
 
+# aliases
+touch $HOME/localaliases.sh
+rm -f $HOME/aliases.sh
+# source this in .zshrc
+ln -s $SCRIPTPATH/aliases.sh $HOME/aliases.sh
+
 rm -f $HOME/.vimrc
 ln -s $SCRIPTPATH/init.vim $HOME/.vimrc
 
