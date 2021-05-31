@@ -39,7 +39,11 @@ ln -s $SCRIPTPATH/init.vim $HOME/.vimrc
 rm -f $HOME/.config/nvim/init.vim
 
 [ ! -d $HOME/.config/nvim ] && mkdir $HOME/.config/nvim
+
+rm -f $HOME/.config/nvim/init.vim
 ln -s $SCRIPTPATH/init.vim $HOME/.config/nvim/init.vim
+
+rm -f $HOME/.config/nvim/.ideavimrc
 ln -s $SCRIPTPATH/init.vim $HOME/.config/nvim/.ideavimrc
 
 rm -f $HOME/.zshrc
