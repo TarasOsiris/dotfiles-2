@@ -27,6 +27,9 @@ ln -s $SCRIPTPATH/aliases.sh $HOME/aliases.sh
 
 rm -f $HOME/.vimrc
 ln -s $SCRIPTPATH/init.vim $HOME/.vimrc
+rm -f $HOME/.config/nvim/init.vim
+ln -s $SCRIPTPATH/init.vim $HOME/.config/nvim/init.vim
+ln -s $SCRIPTPATH/init.vim $HOME/.config/nvim/.ideavimrc
 
 rm -f $HOME/.zshrc
 ln -s $SCRIPTPATH/.zshrc $HOME/.zshrc
