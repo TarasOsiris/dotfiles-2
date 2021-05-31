@@ -24,3 +24,16 @@ set clipboard+=unnamedplus
 set relativenumber
 set ignorecase
 set background=dark
+
+" leader
+let mapleader = " "
+
+" Enter command mode immediately
+nnoremap ; :
+
+"-----------------
+"-- INSERT MODE --
+"-----------------
+" Exit insert mode
+inoremap jk <esc>
+inoremap <esc> <nop>
