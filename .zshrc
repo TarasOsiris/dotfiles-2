@@ -26,3 +26,5 @@ source $ZSH/oh-my-zsh.sh
 # ALT-C - cd into the selected directory
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
+
+echo "Hello Taras!"
