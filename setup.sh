@@ -25,8 +25,8 @@ echo "Script folder: $SCRIPTPATH"
 cd $SCRIPTPATH
 
 # aliases
-touch $HOME/localaliases.sh
 rm -f $HOME/aliases.sh
+touch $HOME/localaliases.sh
 
 # Config directory
 [ ! -d $HOME/.config ] && mkdir $HOME/.config
@@ -50,7 +50,6 @@ ln -s $SCRIPTPATH/.gitconfig $HOME/.gitconfig
 
 rm -f $HOME/.gitignored
 ln -s $SCRIPTPATH/.gitignored $HOME/.gitignored
-
 
 rm -f $HOME/.config/yakuakerc
 ln -s $SCRIPTPATH/.config/yakuakerc $HOME/.config/yakuakerc

@@ -14,10 +14,11 @@ fi
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-source $ZSH/oh-my-zsh.sh
 plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 
 source $HOME/aliases.sh
+
+source $ZSH/oh-my-zsh.sh
 
 # Fuzzy finder
 # CTRL-T - Paste the selected files and directories onto the command-line
