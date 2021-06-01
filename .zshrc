@@ -17,6 +17,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 
 source $HOME/aliases.sh
+source $HOME/localaliases.sh
 
 source $ZSH/oh-my-zsh.sh
 

@@ -10,6 +10,7 @@ alias ealias='nvim ~/.aliases.sh'
 alias e='nvim'
 alias f='ranger'
 alias b='bat'
+alias u= 'yay -Syu --noconfirm'
 
 alias ezsh="nvim ~/.zshrc"
 alias czsh='cat ~/.zshrc'
