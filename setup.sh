@@ -9,6 +9,8 @@ git config --global user.name "Taras Leskiv"
 # core
 sudo pacman -S yay zsh vim neovim htop stow fzf --noconfirm
 
+yay -S bat --noconfirm
+
 # oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 chsh -s $(which zsh)
