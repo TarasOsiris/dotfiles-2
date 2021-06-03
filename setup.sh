@@ -36,11 +36,15 @@ touch $HOME/localaliases.sh
 # source this in .zshrc
 ln -s $HOME/dotfiles/aliases.sh $HOME/aliases.sh
 
+# VIM
 rm -f $HOME/.vimrc
 ln -s $HOME/dotfiles/init.vim $HOME/.vimrc
 rm -f $HOME/.config/nvim/init.vim
 
 [ ! -d $HOME/.config/nvim ] && mkdir $HOME/.config/nvim
+# for plugin manager to work
+rm -rf $HOME/.config/nvim/autoload
+ln -s $HOME/.vim/autoload $HOME/.config/nvim/autoload
 
 rm -f $HOME/.config/nvim/init.vim
 ln -s $HOME/dotfiles/init.vim $HOME/.config/nvim/init.vim

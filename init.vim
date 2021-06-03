@@ -43,3 +43,7 @@ nnoremap H ^
 " Exit insert mode
 inoremap jk <esc>
 inoremap <esc> <nop>
+
+call plug#begin('~/.vim/plugged')
+Plug 'tpope/vim-sensible'
+call plug#end()
