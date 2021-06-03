@@ -25,10 +25,6 @@ git clone git@github.com:MichaelAquilina/zsh-you-should-use.git ${ZSH_CUSTOM:-~/
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # symlink
-SCRIPT=$(readlink -f "$0")
-SCRIPTPATH=$(dirname "$SCRIPT")
-echo "Script folder: $SCRIPTPATH"
-cd $SCRIPTPATH
 
 # aliases
 rm -f $HOME/aliases.sh
@@ -38,28 +34,28 @@ touch $HOME/localaliases.sh
 [ ! -d $HOME/.config ] && mkdir $HOME/.config
 
 # source this in .zshrc
-ln -s $SCRIPTPATH/aliases.sh $HOME/aliases.sh
+ln -s $HOME/dotfiles/aliases.sh $HOME/aliases.sh
 
 rm -f $HOME/.vimrc
-ln -s $SCRIPTPATH/init.vim $HOME/.vimrc
+ln -s $HOME/dotfiles/init.vim $HOME/.vimrc
 rm -f $HOME/.config/nvim/init.vim
 
 [ ! -d $HOME/.config/nvim ] && mkdir $HOME/.config/nvim
 
 rm -f $HOME/.config/nvim/init.vim
-ln -s $SCRIPTPATH/init.vim $HOME/.config/nvim/init.vim
+ln -s $HOME/dotfiles/init.vim $HOME/.config/nvim/init.vim
 
 rm -f $HOME/.config/nvim/.ideavimrc
-ln -s $SCRIPTPATH/init.vim $HOME/.config/nvim/.ideavimrc
+ln -s $HOME/dotfiles/init.vim $HOME/.config/nvim/.ideavimrc
 
 rm -f $HOME/.zshrc
-ln -s $SCRIPTPATH/.zshrc $HOME/.zshrc
+ln -s $HOME/dotfiles/.zshrc $HOME/.zshrc
 
 rm -f $HOME/.gitconfig
-ln -s $SCRIPTPATH/.gitconfig $HOME/.gitconfig
+ln -s $HOME/dotfiles/.gitconfig $HOME/.gitconfig
 
 rm -f $HOME/.gitignored
-ln -s $SCRIPTPATH/.gitignored $HOME/.gitignored
+ln -s $HOME/dotfiles/.gitignored $HOME/.gitignored
 
 rm -f $HOME/.config/yakuakerc
-ln -s $SCRIPTPATH/.config/yakuakerc $HOME/.config/yakuakerc
+ln -s $HOME/dotfiles/.config/yakuakerc $HOME/.config/yakuakerc
