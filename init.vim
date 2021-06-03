@@ -33,7 +33,7 @@ let mapleader = " "
 " Enter command mode immediately
 nnoremap ; :
 
-" easier beinning and end of line
+" easier beginning and end of line
 nnoremap L $
 nnoremap H ^
 
