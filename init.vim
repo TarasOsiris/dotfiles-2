@@ -28,8 +28,14 @@ set background=dark
 " leader
 let mapleader = " "
 
+" REMAPS
+
 " Enter command mode immediately
 nnoremap ; :
+
+" easier beinning and end of line
+nnoremap L $
+nnoremap H ^
 
 "-----------------
 "-- INSERT MODE --
