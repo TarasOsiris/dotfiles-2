@@ -4,7 +4,7 @@ alias df='cd ~/dotfiles'
 alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify --no-gpg-sign -m "--wip--"'
 alias gwipp='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify --no-gpg-sign -m "--wip--"; git push'
 
-alias ealias='nvim ~/.aliases.sh'
+alias ealias='nvim ~/aliases.sh'
 
 # Tools
 alias e='nvim'
