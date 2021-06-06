@@ -21,11 +21,4 @@ source $HOME/localaliases.sh
 
 source $ZSH/oh-my-zsh.sh
 
-# Fuzzy finder
-# CTRL-T - Paste the selected files and directories onto the command-line
-# CTRL-R - Paste the selected command from history onto the command-line
-# ALT-C - cd into the selected directory
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
-
-echo "Hello Taras!"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
