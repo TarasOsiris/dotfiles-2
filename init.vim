@@ -63,6 +63,7 @@ Plug 'morhetz/gruvbox'
 " Press - in any buffer to hop up to the directory listing and seek to the file you just came from. Keep bouncing to go up, up, up. Having rapid directory access available changes everything.
 Plug 'tpope/vim-vinegar'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 " Gruvbox config magick

@@ -19,8 +19,6 @@ chsh -s $(which zsh)
 git clone git@github.com:zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone git@github.com:zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone git@github.com:MichaelAquilina/zsh-you-should-use.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-you-should-use
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
 
 # vim
 # Plugin manager
@@ -42,7 +40,7 @@ ln -s $HOME/dotfiles/aliases.sh $HOME/aliases.sh
 # VIM
 rm -f $HOME/.vimrc
 ln -s $HOME/dotfiles/init.vim $HOME/.vimrc
-rm -f $HOME/coc.nvim
+rm -f $HOME/.vimrc
 ln -s $HOME/dotfiles/coc.nvim $HOME/coc.nvim
 rm -f $HOME/.config/nvim/init.vim
 
