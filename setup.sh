@@ -40,6 +40,8 @@ ln -s $HOME/dotfiles/aliases.sh $HOME/aliases.sh
 # VIM
 rm -f $HOME/.vimrc
 ln -s $HOME/dotfiles/init.vim $HOME/.vimrc
+rm -f $HOME/coc.nvim
+ln -s $HOME/dotfiles/coc.nvim $HOME/coc.nvim
 rm -f $HOME/.config/nvim/init.vim
 
 [ ! -d $HOME/.config/nvim ] && mkdir $HOME/.config/nvim
