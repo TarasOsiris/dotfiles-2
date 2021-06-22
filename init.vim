@@ -49,6 +49,12 @@ nnoremap ; :
 nnoremap L $
 nnoremap H ^
 
+"-------------------------------
+"-- OPERATOR PENDING MAPPINGS --
+
+:onoremap in( :<c-u>normal! f(vi(<cr>
+
+"-------------------------------
 "-----------------
 "-- INSERT MODE --
 "-----------------
