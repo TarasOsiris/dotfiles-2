@@ -34,7 +34,8 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " WINDOWS {{{
-nnoremap <leader>h :wincmd h<CR> nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>h :wincmd h<CR> 
+nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
@@ -52,6 +53,9 @@ nnoremap H ^
 "-------------------------------
 "-- OPERATOR PENDING MAPPINGS --
 
+" change in (
+:onoremap p i(
+" change in next (
 :onoremap in( :<c-u>normal! f(vi(<cr>
 
 "-------------------------------
