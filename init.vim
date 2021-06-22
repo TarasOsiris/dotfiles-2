@@ -52,13 +52,16 @@ nnoremap H ^
 
 "-------------------------------
 "-- OPERATOR PENDING MAPPINGS --
+"-------------------------------
 
 " change in (
 :onoremap p i(
 " change in next (
 :onoremap in( :<c-u>normal! f(vi(<cr>
+" change in prev (
+:onoremap il( :<c-u>normal! F)vi(<cr>
 
-"-------------------------------
+
 "-----------------
 "-- INSERT MODE --
 "-----------------
