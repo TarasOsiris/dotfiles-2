@@ -53,7 +53,9 @@ rm -f $HOME/.config/nvim/init.vim
 ln -s $HOME/dotfiles/init.vim $HOME/.config/nvim/init.vim
 
 rm -f $HOME/.config/nvim/.ideavimrc
+rm -f $HOME/.ideavimrc
 ln -s $HOME/dotfiles/init.vim $HOME/.config/nvim/.ideavimrc
+ln -s $HOME/dotfiles/init.vim $HOME/.ideavimrc
 
 rm -f $HOME/.zshrc
 ln -s $HOME/dotfiles/.zshrc $HOME/.zshrc
