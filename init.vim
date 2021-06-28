@@ -19,6 +19,7 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
+set hls
 set showcmd
 set clipboard+=unnamedplus
 set relativenumber
@@ -53,6 +54,7 @@ nnoremap H ^
 "-------------------------------
 "-- OPERATOR PENDING MAPPINGS --
 "-------------------------------
+" https://learnvimscriptthehardway.stevelosh.com/chapters/15.html
 
 " change in (
 :onoremap p i(
