@@ -10,6 +10,7 @@ set tabstop=4
 set shiftwidth=4
 
 set noerrorbells
+set showmode
 set encoding=UTF-8
 set nu
 set wrap
