@@ -96,6 +96,7 @@ colorscheme gruvbox
 
 " Fuzzy finder
 nnoremap <C-n> :GFiles<CR>
+nnoremap <C-g> :Ag<CR>
 
 " netrw configuration
 let g:netrw_liststyle = 3
