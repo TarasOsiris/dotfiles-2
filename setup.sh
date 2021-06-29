@@ -7,7 +7,7 @@ git config --global user.email "leskiv.taras@gmail.com"
 git config --global user.name "Taras Leskiv"
 
 # core
-sudo pacman -S yay zsh vim neovim htop stow fzf --noconfirm
+sudo pacman -S yay zsh vim neovim htop stow fzf the_silver_searcher --noconfirm
 
 yay -S bat --noconfirm
 
