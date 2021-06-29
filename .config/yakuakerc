@@ -3,7 +3,8 @@ Frames=5
 UseWMAssist=false
 
 [Appearance]
-Skin=materia-dark
+Skin=breeze_dark
+SkinInstalledWithKns=true
 Translucency=true
 
 [DownloadDialog Settings]

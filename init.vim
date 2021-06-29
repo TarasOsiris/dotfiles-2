@@ -95,7 +95,7 @@ let g:gruvbox_invert_selection='0'
 colorscheme gruvbox
 
 " Fuzzy finder
-nnoremap <C-p> :GFiles<CR>
+nnoremap <C-n> :GFiles<CR>
 
 " netrw configuration
 let g:netrw_liststyle = 3
