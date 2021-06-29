@@ -7,12 +7,19 @@ Skin=breeze_dark
 SkinInstalledWithKns=true
 Translucency=true
 
+[Behavior]
+OpenAfterStart=true
+RememberFullscreen=true
+
 [DownloadDialog Settings]
 HDMI-1-0 eDP-1 Height 2560x1440=494
 HDMI-1-0 eDP-1 Width 2560x1440=700
 
 [KFileDialog Settings]
 detailViewIconSize=16
+
+[Shortcuts]
+keep-open=Ctrl+P
 
 [Window]
 DynamicTabTitles=true
