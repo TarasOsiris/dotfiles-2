@@ -14,7 +14,6 @@ set noerrorbells
 set showmode
 set encoding=UTF-8
 set nu
-set wrap
 set smartcase
 set noswapfile
 set nobackup
