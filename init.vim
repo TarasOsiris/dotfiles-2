@@ -35,16 +35,6 @@ let mapleader = " "
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
-" WINDOWS {{{
-nnoremap <leader>h :wincmd h<CR> 
-nnoremap <leader>j :wincmd j<CR>
-nnoremap <leader>k :wincmd k<CR>
-nnoremap <leader>l :wincmd l<CR>
-
-" Close window
-nnoremap <leader>q :wincmd q<CR>
-" }}}
-
 " Enter command mode immediately
 nnoremap ; :
 
@@ -78,7 +68,7 @@ Plug 'tpope/vim-sensible'
 Plug 'morhetz/gruvbox'
 " Press - in any buffer to hop up to the directory listing and seek to the file you just came from. Keep bouncing to go up, up, up. Having rapid directory access available changes everything.
 Plug 'tpope/vim-vinegar'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', " {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -95,8 +85,10 @@ if exists('+termguicolors')
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
 let g:gruvbox_invert_selection='0'
-
 colorscheme gruvbox
+
+" Airline
+let g:airline_section_c = '%<%F%m %#__accent_red#%{airline#util#wrap(airline#parts#readonly(),0)}%#__restore__#'
 
 " Fuzzy finder
 nnoremap <leader>n :GFiles<CR>
