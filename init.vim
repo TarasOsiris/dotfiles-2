@@ -54,6 +54,11 @@ nnoremap H ^
 " change in prev (
 :onoremap il( :<c-u>normal! F)vi(<cr>
 
+" WINDOWS {{{
+nnoremap <leader>h :wincmd h<CR>
+nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>l :wincmd l<CR>
 
 "-----------------
 "-- INSERT MODE --
