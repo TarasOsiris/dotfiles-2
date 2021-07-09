@@ -64,6 +64,7 @@ inoremap <esc> <nop>
 
 " PLUGINS
 call plug#begin('~/.vim/plugged')
+
 Plug 'tpope/vim-sensible'
 Plug 'morhetz/gruvbox'
 " Press - in any buffer to hop up to the directory listing and seek to the file you just came from. Keep bouncing to go up, up, up. Having rapid directory access available changes everything.
@@ -72,6 +73,7 @@ Plug 'neoclide/coc.nvim', " {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-fugitive'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
