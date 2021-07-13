@@ -42,6 +42,9 @@ nnoremap ; :
 nnoremap L $
 nnoremap H ^
 
+" newline in normal mode
+nmap <CR><CR> o<esc>
+
 "-------------------------------
 "-- OPERATOR PENDING MAPPINGS --
 "-------------------------------
@@ -64,8 +67,7 @@ nnoremap <leader>l :wincmd l<CR>
 "-- INSERT MODE --
 "-----------------
 " Exit insert mode
-inoremap jk <esc>
-inoremap <esc> <nop>
+inoremap jj <esc>
 
 " PLUGINS
 call plug#begin('~/.vim/plugged')
