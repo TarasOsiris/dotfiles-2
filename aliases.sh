@@ -15,7 +15,7 @@ alias u='yay -Syu --noconfirm'
 alias ezsh="nvim ~/.zshrc"
 alias czsh='cat ~/.zshrc'
 alias szsh='source ~/.zshrc'
-alias ev='nvim ~/.vimrc'
+alias ev='nvim ~/.config/nvim/init.vim'
 
 # CDs
 alias d="cd ~/Documents"

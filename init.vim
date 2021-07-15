@@ -52,6 +52,9 @@ nmap <CR><CR> o<esc>
 
 " change in (
 :onoremap p i(
+:onoremap b i{
+:onoremap ab a{
+
 " change in next (
 :onoremap in( :<c-u>normal! f(vi(<cr>
 " change in prev (
