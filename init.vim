@@ -35,6 +35,9 @@ let mapleader = " "
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
+" Source Vim configuration file and install plugins
+nnoremap <silent><leader>1 :source $MYVIMRC \| :PlugInstall<CR>
+
 " Enter command mode immediately
 nnoremap ; :
 
