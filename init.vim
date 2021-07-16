@@ -82,6 +82,8 @@ Plug 'tpope/vim-sensible'
 Plug 'morhetz/gruvbox'
 " Press - in any buffer to hop up to the directory listing and seek to the file you just came from. Keep bouncing to go up, up, up. Having rapid directory access available changes everything.
 Plug 'tpope/vim-vinegar'
+" Smart tab detection
+Plug 'tpope/vim-sleuth'
 Plug 'neoclide/coc.nvim', " {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -91,6 +93,12 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-syntastic/syntastic'
+
+
+Plug 'pangloss/vim-javascript'    " JavaScript support
+Plug 'leafgarland/typescript-vim' " TypeScript syntax
+Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
+Plug 'jparise/vim-graphql'        " GraphQL syntax
 
 call plug#end()
 
@@ -119,6 +127,17 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 let g:netrw_winsize = 25
 
 source $HOME/coc.nvim
+" CoC extensions
+let g:coc_global_extensions = ['coc-tsserver']
+" Remap keys for applying codeAction to the current line.
+nmap <leader>ac  <Plug>(coc-codeaction)
+" Apply AutoFix to problem on the current line.
+nmap <leader>qf  <Plug>(coc-fix-current)
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 " Syntastic default recommended settings
 set statusline+=%#warningmsg#
