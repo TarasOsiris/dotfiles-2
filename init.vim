@@ -147,9 +147,6 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" Symbol renaming.
-nmap <leader>rn <Plug>(coc-rename)
-
 " Formatting selected code.
 xmap <leader>g  <Plug>(coc-format-selected)
 nmap <leader>g  <Plug>(coc-format-selected)
