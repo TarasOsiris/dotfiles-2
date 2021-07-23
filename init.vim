@@ -65,6 +65,9 @@ nmap <CR><CR> o<esc>
 :onoremap il( :<c-u>normal! F)vi(<cr>
 
 " WINDOWS {{{
+" close window
+nnoremap <leader>q :wincmd q<CR>
+
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
@@ -146,6 +149,9 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
 
 " Formatting selected code.
 xmap <leader>g  <Plug>(coc-format-selected)
