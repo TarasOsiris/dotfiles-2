@@ -5,7 +5,7 @@ set listchars=tab:>-,trail:~,extends:>,precedes:<,space:.
 set list
 set shell=/bin/zsh
 
-set autoindent
+set smartindent
 set noexpandtab
 set tabstop=4
 set shiftwidth=4
@@ -70,6 +70,14 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
+" Vertical Split Buffer Function
+function VerticalSplitBuffer(buffer)
+    execute "vert belowright sb" a:buffer 
+endfunction
+
+" Vertical Split Buffer Mapping
+command -nargs=1 Vbuffer call VerticalSplitBuffer(<f-args>)
+
 "-----------------
 "-- INSERT MODE --
 "-----------------
@@ -94,7 +102,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-syntastic/syntastic'
-
+Plug 'preservim/nerdcommenter'
 
 Plug 'pangloss/vim-javascript'    " JavaScript support
 Plug 'leafgarland/typescript-vim' " TypeScript syntax
