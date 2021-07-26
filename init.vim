@@ -169,3 +169,12 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_yaml_checkers = [ "yamllint" ]
 let g:syntastic_ignore_files = [ "\.java$" ]
+
+" FINDING FILES
+"
+" Search down into subfolders
+" Provides tab-completion for all file-related tasks
+set path+=**
+
+" Display all matching files when we tab complete
+set wildmenu
