@@ -29,6 +29,13 @@ set relativenumber
 set ignorecase
 set background=dark
 
+" Vimscript file settings ---------------------- {{{
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+augroup END
+" }}}
+
 " leader
 let mapleader = " "
 
@@ -65,22 +72,28 @@ nmap <CR><CR> o<esc>
 " change in prev (
 :onoremap il( :<c-u>normal! F)vi(<cr>
 
+" TABS {{{
+" Go to tab by number
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+noremap <leader>0 :tablast<cr>
+" }}}
+
 " WINDOWS {{{
-" close window
 nnoremap <leader>q :wincmd q<CR>
 
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
-
-" Vertical Split Buffer Function
-function VerticalSplitBuffer(buffer)
-    execute "vert belowright sb" a:buffer 
-endfunction
-
-" Vertical Split Buffer Mapping
-command -nargs=1 Vbuffer call VerticalSplitBuffer(<f-args>)
+" }}}
 
 "-----------------
 "-- INSERT MODE --
@@ -133,6 +146,7 @@ nnoremap <leader>n :GFiles<CR>
 nnoremap <leader>p :Files<CR>
 nnoremap <leader>f :Ag<CR>
 nnoremap <leader>e :Buffers<CR>
+nnoremap <leader>r :History:<CR>
 
 " netrw configuration
 let g:netrw_liststyle = 3
