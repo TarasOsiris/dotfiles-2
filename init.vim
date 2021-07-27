@@ -4,7 +4,6 @@ filetype plugin on
 set listchars=tab:>-,trail:~,extends:>,precedes:<,space:.
 set list
 set shell=/bin/zsh
-set guicursor=a:blinkon100
 
 set smartindent
 set noexpandtab
@@ -97,6 +96,7 @@ Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-vinegar'
 " Smart tab detection
 Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-obsession'
 Plug 'neoclide/coc.nvim', " {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
