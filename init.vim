@@ -155,7 +155,7 @@ nmap <silent> gr <Plug>(coc-references)
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
 
-" Formatting selected code.
+" Formatting selected/all code.
 xmap <leader>gs  <Plug>(coc-format-selected)
 nmap <leader>gs  <Plug>(coc-format-selected)
 xmap <leader>ga  :Format<CR>
