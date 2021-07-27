@@ -156,8 +156,10 @@ nmap <silent> gr <Plug>(coc-references)
 nmap <leader>rn <Plug>(coc-rename)
 
 " Formatting selected code.
-xmap <leader>g  <Plug>(coc-format-selected)
-nmap <leader>g  <Plug>(coc-format-selected)
+xmap <leader>gs  <Plug>(coc-format-selected)
+nmap <leader>gs  <Plug>(coc-format-selected)
+xmap <leader>ga  :Format<CR>
+nmap <leader>ga  :Format<CR>
 
 " Syntastic default recommended settings
 set statusline+=%#warningmsg#
