@@ -4,6 +4,7 @@ filetype plugin on
 set listchars=tab:>-,trail:~,extends:>,precedes:<,space:.
 set list
 set shell=/bin/zsh
+set guicursor=a:blinkon100
 
 set smartindent
 set noexpandtab
