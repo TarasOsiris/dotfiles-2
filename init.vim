@@ -10,6 +10,7 @@ set noexpandtab
 set tabstop=4
 set shiftwidth=4
 set nowrap
+set cursorline
 
 set noerrorbells
 set showmode
