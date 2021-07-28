@@ -152,6 +152,7 @@ nnoremap <leader>rr :History:<CR>
 " }}}
 
 " {{{ FUGITIVE
+nmap <leader>ggs :Git<CR>
 nmap <leader>ggt :Git pull<CR>
 nmap <leader>ggd :Gvdiff<CR>
 " }}}
