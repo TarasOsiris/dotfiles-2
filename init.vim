@@ -145,8 +145,8 @@ let g:airline_section_c = '%<%F%m %#__accent_red#%{airline#util#wrap(airline#par
 nnoremap <leader>n :GFiles<CR>
 nnoremap <leader>p :Files<CR>
 nnoremap <leader>f :Ag<CR>
-nnoremap <leader>e :Buffers<CR>
-nnoremap <leader>r :History:<CR>
+nnoremap <leader>ee :Buffers<CR>
+nnoremap <leader>rr :History:<CR>
 
 " netrw configuration
 let g:netrw_liststyle = 3
