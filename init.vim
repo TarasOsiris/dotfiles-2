@@ -130,7 +130,7 @@ Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
 call plug#end()
 " }}}
 
-" Gruvbox config magick
+" {{{ GRUVBOX CONFIG MAGICK
 let g:gruvbox_contrast_dark = 'hard'
 if exists('+termguicolors')
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -138,6 +138,7 @@ if exists('+termguicolors')
 endif
 let g:gruvbox_invert_selection='0'
 colorscheme gruvbox
+" }}}
 
 " Airline
 let g:airline_section_c = '%<%F%m %#__accent_red#%{airline#util#wrap(airline#parts#readonly(),0)}%#__restore__#'
@@ -148,6 +149,11 @@ nnoremap <leader>p :Files<CR>
 nnoremap <leader>f :Ag<CR>
 nnoremap <leader>ee :Buffers<CR>
 nnoremap <leader>rr :History:<CR>
+" }}}
+
+" {{{ FUGITIVE
+nmap <leader>ggt :Git pull<CR>
+nmap <leader>ggd :Gvdiff<CR>
 " }}}
 
 " netrw configuration
