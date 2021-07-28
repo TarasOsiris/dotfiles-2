@@ -101,7 +101,7 @@ nnoremap <leader>l :wincmd l<CR>
 " Exit insert mode
 inoremap jj <esc>
 
-" PLUGINS
+" {{{ PLUGINS
 call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-sensible'
@@ -128,6 +128,7 @@ Plug 'leafgarland/typescript-vim' " TypeScript syntax
 Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
 
 call plug#end()
+" }}}
 
 " Gruvbox config magick
 let g:gruvbox_contrast_dark = 'hard'
@@ -141,12 +142,13 @@ colorscheme gruvbox
 " Airline
 let g:airline_section_c = '%<%F%m %#__accent_red#%{airline#util#wrap(airline#parts#readonly(),0)}%#__restore__#'
 
-" Fuzzy finder
+" {{{ FUZZY FINDER
 nnoremap <leader>n :GFiles<CR>
 nnoremap <leader>p :Files<CR>
 nnoremap <leader>f :Ag<CR>
 nnoremap <leader>ee :Buffers<CR>
 nnoremap <leader>rr :History:<CR>
+" }}}
 
 " netrw configuration
 let g:netrw_liststyle = 3
