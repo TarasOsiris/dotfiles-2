@@ -141,9 +141,6 @@ let g:gruvbox_invert_selection='0'
 colorscheme gruvbox
 " }}}
 
-" Airline
-let g:airline_section_c = '%<%F%m %#__accent_red#%{airline#util#wrap(airline#parts#readonly(),0)}%#__restore__#'
-
 " {{{ FUZZY FINDER
 nnoremap <leader>n :GFiles<CR>
 nnoremap <leader>p :Files<CR>
