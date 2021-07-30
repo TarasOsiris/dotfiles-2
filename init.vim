@@ -131,6 +131,7 @@ Plug 'mattn/emmet-vim'
 call plug#end()
 " }}}
 
+
 " {{{ GRUVBOX CONFIG MAGICK
 let g:gruvbox_contrast_dark = 'hard'
 if exists('+termguicolors')
@@ -204,3 +205,5 @@ set path+=**
 
 " Display all matching files when we tab complete
 set wildmenu
+
+let g:airline_theme='badwolf'
