@@ -57,6 +57,11 @@ nnoremap H ^
 " Copy till the end of line
 nnoremap Y y$
 
+" Keep it centered
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
+
 " newline in normal mode
 nmap <CR><CR> o<esc>
 
