@@ -39,7 +39,7 @@ augroup END
 " LEADER
 let mapleader = " "
 
-" REMAPS
+" {{{ REMAPS
 " Edit ~/.vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
@@ -53,6 +53,9 @@ nnoremap ; :
 " easier beginning and end of line
 nnoremap L $
 nnoremap H ^
+
+" Copy till the end of line
+nnoremap Y y$
 
 " newline in normal mode
 nmap <CR><CR> o<esc>
@@ -71,6 +74,7 @@ nmap <CR><CR> o<esc>
 :onoremap in( :<c-u>normal! f(vi(<cr>
 " change in prev (
 :onoremap il( :<c-u>normal! F)vi(<cr>
+" }}}
 
 " TABS {{{
 " Go to tab by number
