@@ -176,8 +176,7 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 let g:netrw_winsize = 25
 
 source $HOME/coc.nvim
-" CoC extensions
-let g:coc_global_extensions = ['coc-tsserver']
+
 " Remap keys for applying codeAction to the current line.
 nmap <leader>ac  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
