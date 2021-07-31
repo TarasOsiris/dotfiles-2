@@ -128,6 +128,11 @@ Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'mkitt/tabline.vim'
 
+" Telescope
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-syntastic/syntastic'
@@ -154,12 +159,12 @@ let g:gruvbox_invert_selection='0'
 colorscheme gruvbox
 " }}}
 
-" {{{ FUZZY FINDER
-nnoremap <leader>n :GFiles<CR>
-nnoremap <leader>p :Files<CR>
-nnoremap <leader>f :Ag<CR>
-nnoremap <leader>ee :Buffers<CR>
-nnoremap <leader>rr :History:<CR>
+" {{{ TELESCOPE
+nnoremap <leader>n <cmd>Telescope git_files<cr>
+nnoremap <leader>pp <cmd>Telescope find_files<cr>
+nnoremap <leader>f <cmd>Telescope live_grep<cr>
+nnoremap <leader>ee <cmd>Telescope buffers<cr>
+nnoremap <leader>rr <cmd>Telescope command_history<cr>
 " }}}
 
 " {{{ FUGITIVE
