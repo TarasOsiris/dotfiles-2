@@ -120,8 +120,6 @@ Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-obsession'
 Plug 'neoclide/coc.nvim', " {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'mkitt/tabline.vim'
 
