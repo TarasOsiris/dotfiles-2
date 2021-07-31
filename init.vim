@@ -60,6 +60,12 @@ nnoremap Y y$
 " newline in normal mode
 nmap <CR><CR> o<esc>
 
+"-----------------
+"-- INSERT MODE --
+"-----------------
+" Exit insert mode
+inoremap jj <esc>
+
 "-------------------------------
 "-- OPERATOR PENDING MAPPINGS --
 "-------------------------------
@@ -99,11 +105,6 @@ nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 " }}}
 
-"-----------------
-"-- INSERT MODE --
-"-----------------
-" Exit insert mode
-inoremap jj <esc>
 
 " {{{ PLUGINS
 call plug#begin('~/.vim/plugged')
