@@ -9,10 +9,10 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
 endif
 set shortmess=aoO
 badd +1 README.md
-badd +0 Session.vim
-badd +0 aliases.sh
-badd +0 coc.nvim
-badd +0 init.sh
+badd +1 Session.vim
+badd +1 aliases.sh
+badd +1 coc.nvim
+badd +1 init.sh
 badd +1 init.vim
 badd +1 setup.sh
 badd +1 .gitignored
@@ -111,11 +111,15 @@ normal! zt
 keepjumps 1
 normal! 0
 tabnext
-edit init.sh
+edit init.vim
 argglobal
 5argu
-balt README.md
-setlocal fdm=manual
+if bufexists("init.vim") | buffer init.vim | else | edit init.vim | endif
+if &buftype ==# 'terminal'
+  silent file init.vim
+endif
+balt init.sh
+setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
@@ -123,14 +127,13 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-silent! normal! zE
-let &fdl = &fdl
 let s:l = 1 - ((0 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 1
 normal! 0
+lcd ~/dotfiles
 tabnext 5
 set stal=1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0&& getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
