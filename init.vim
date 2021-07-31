@@ -3,7 +3,10 @@ filetype plugin on
 
 set listchars=tab:>-,trail:~,extends:>,precedes:<,space:.
 set list
-set shell=/bin/zsh
+
+if (!has("win32"))
+    set shell=/bin/zsh
+endif
 
 set smartindent
 set noexpandtab
