@@ -44,9 +44,6 @@ let mapleader = " "
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
-" Source Vim configuration file and install plugins
-nnoremap <silent><leader>pi :source $MYVIMRC \| :PlugInstall<CR>
-
 " Enter command mode immediately
 nnoremap ; :
 
@@ -161,7 +158,7 @@ colorscheme gruvbox
 
 " {{{ TELESCOPE
 nnoremap <leader>n <cmd>Telescope git_files<cr>
-nnoremap <leader>pp <cmd>Telescope find_files<cr>
+nnoremap <leader>p <cmd>Telescope find_files<cr>
 nnoremap <leader>f <cmd>Telescope live_grep<cr>
 nnoremap <leader>ee <cmd>Telescope buffers<cr>
 nnoremap <leader>rr <cmd>Telescope command_history<cr>
