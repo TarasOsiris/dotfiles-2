@@ -7,7 +7,10 @@ alias gwipp='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git comm
 alias ealias='nvim ~/aliases.sh'
 
 # Tools
-alias e='nvim'
+alias e='nvim' # edit
+alias es='nvim -S' # edit and restore session
+alias ea='nvim -p *' # edit all files in tabs
+
 alias f='ranger'
 alias b='bat'
 alias u='yay -Syu --noconfirm'
