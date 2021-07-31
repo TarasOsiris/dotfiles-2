@@ -8,19 +8,22 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +1 aliases.sh
+badd +1 README.md
+badd +0 Session.vim
+badd +0 aliases.sh
 badd +0 coc.nvim
 badd +0 init.sh
-badd +154 init.vim
-badd +0 README.md
-badd +0 setup.sh
+badd +1 init.vim
+badd +1 setup.sh
+badd +1 .gitignored
 argglobal
 %argdel
+$argadd README.md
+$argadd Session.vim
 $argadd aliases.sh
 $argadd coc.nvim
 $argadd init.sh
 $argadd init.vim
-$argadd README.md
 $argadd setup.sh
 set stal=2
 tabnew
@@ -28,7 +31,7 @@ tabnew
 tabnew
 tabnew
 tabrewind
-edit aliases.sh
+edit README.md
 argglobal
 setlocal fdm=manual
 setlocal fde=0
@@ -40,7 +43,47 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 25) / 50)
+let s:l = 1 - ((0 * winheight(0) + 26) / 52)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
+normal! 0
+tabnext
+edit Session.vim
+argglobal
+2argu
+balt README.md
+setlocal fdm=marker
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 1 - ((0 * winheight(0) + 26) / 52)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
+normal! 0
+tabnext
+edit aliases.sh
+argglobal
+3argu
+balt README.md
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 1 - ((0 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
@@ -49,8 +92,8 @@ normal! 0
 tabnext
 edit coc.nvim
 argglobal
-2argu
-balt aliases.sh
+4argu
+balt README.md
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -61,7 +104,7 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 25) / 50)
+let s:l = 1 - ((0 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
@@ -70,29 +113,8 @@ normal! 0
 tabnext
 edit init.sh
 argglobal
-3argu
-balt aliases.sh
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 25) / 50)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 1
-normal! 0
-tabnext
-edit README.md
-argglobal
 5argu
-balt aliases.sh
+balt README.md
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -103,34 +125,13 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 25) / 50)
+let s:l = 1 - ((0 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 1
 normal! 0
-tabnext
-edit setup.sh
-argglobal
-6argu
-balt aliases.sh
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 25) / 50)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 1
-normal! 0
-tabnext 4
+tabnext 5
 set stal=1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0&& getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
@@ -143,6 +144,7 @@ if filereadable(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
+nohlsearch
 let g:this_session = v:this_session
 let g:this_obsession = v:this_session
 doautoall SessionLoadPost
