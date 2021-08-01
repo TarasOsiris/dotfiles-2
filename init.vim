@@ -174,7 +174,7 @@ nnoremap <leader>rr <cmd>Telescope command_history<cr>
 " }}}
 
 " {{{ FUGITIVE
-nmap <leader>ggs :Git<CR>
+nmap <leader>ggs <cmd>Telescope git_status<cr>
 nmap <leader>ggt :Git pull<CR>
 nmap <leader>ggd :Gvdiff<CR>
 nmap <leader>ggh <cmd>Telescope git_bcommits<cr>
@@ -182,6 +182,7 @@ nmap <leader>ggh <cmd>Telescope git_bcommits<cr>
 
 " netrw configuration
 let g:netrw_liststyle = 3
+
 let g:netrw_banner = 0
 let g:netrw_list_hide=netrw_gitignore#Hide()
 let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
