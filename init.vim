@@ -177,6 +177,7 @@ nnoremap <leader>rr <cmd>Telescope command_history<cr>
 nmap <leader>ggs :Git<CR>
 nmap <leader>ggt :Git pull<CR>
 nmap <leader>ggd :Gvdiff<CR>
+nmap <leader>ggh <cmd>Telescope git_bcommits<cr>
 " }}}
 
 " netrw configuration
