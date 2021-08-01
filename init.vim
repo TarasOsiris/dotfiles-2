@@ -76,6 +76,8 @@ nmap <CR><CR> o<esc>
 "-----------------
 " Exit insert mode
 inoremap jj <esc>
+inoremap jk <esc>
+inoremap kj <esc>
 
 "-------------------------------
 "-- OPERATOR PENDING MAPPINGS --
