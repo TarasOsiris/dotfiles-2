@@ -3,7 +3,10 @@ filetype plugin on
 
 set listchars=tab:>-,trail:~,extends:>,precedes:<,space:.
 set list
-set shell=/bin/zsh
+
+if (!has("win32"))
+    set shell=/bin/zsh
+endif
 
 set smartindent
 set noexpandtab
@@ -39,13 +42,10 @@ augroup END
 " LEADER
 let mapleader = " "
 
-" REMAPS
+" {{{ REMAPS
 " Edit ~/.vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
-
-" Source Vim configuration file and install plugins
-nnoremap <silent><leader>pi :source $MYVIMRC \| :PlugInstall<CR>
 
 " Enter command mode immediately
 nnoremap ; :
@@ -54,8 +54,30 @@ nnoremap ; :
 nnoremap L $
 nnoremap H ^
 
+" Copy till the end of line
+nnoremap Y y$
+
+" Keep it centered
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
+
+" Moving lines around
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+nnoremap <C-j> :m .+1<CR>==
+nnoremap <C-k> :m .-2<CR>==
+
 " newline in normal mode
 nmap <CR><CR> o<esc>
+
+"-----------------
+"-- INSERT MODE --
+"-----------------
+" Exit insert mode
+inoremap jj <esc>
+inoremap jk <esc>
+inoremap kj <esc>
 
 "-------------------------------
 "-- OPERATOR PENDING MAPPINGS --
@@ -71,6 +93,7 @@ nmap <CR><CR> o<esc>
 :onoremap in( :<c-u>normal! f(vi(<cr>
 " change in prev (
 :onoremap il( :<c-u>normal! F)vi(<cr>
+" }}}
 
 " TABS {{{
 " Go to tab by number
@@ -95,11 +118,6 @@ nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 " }}}
 
-"-----------------
-"-- INSERT MODE --
-"-----------------
-" Exit insert mode
-inoremap jj <esc>
 
 " {{{ PLUGINS
 call plug#begin('~/.vim/plugged')
@@ -126,8 +144,17 @@ Plug 'preservim/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-obsession'
 Plug 'neoclide/coc.nvim', " {'branch': 'release'}
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-fugitive'
+Plug 'mkitt/tabline.vim'
+
+" Telescope
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-syntastic/syntastic'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
@@ -152,30 +179,31 @@ let g:gruvbox_invert_selection='0'
 colorscheme gruvbox
 " }}}
 
-" {{{ FUZZY FINDER
-nnoremap <leader>n :GFiles<CR>
-nnoremap <leader>p :Files<CR>
-nnoremap <leader>f :Ag<CR>
-nnoremap <leader>ee :Buffers<CR>
-nnoremap <leader>rr :History:<CR>
+" {{{ TELESCOPE
+nnoremap <leader>n <cmd>Telescope git_files<cr>
+nnoremap <leader>p <cmd>Telescope find_files<cr>
+nnoremap <leader>f <cmd>Telescope live_grep<cr>
+nnoremap <leader>ee <cmd>Telescope buffers<cr>
+nnoremap <leader>rr <cmd>Telescope command_history<cr>
 " }}}
 
 " {{{ FUGITIVE
-nmap <leader>ggs :Git<CR>
+nmap <leader>ggs <cmd>Telescope git_status<cr>
 nmap <leader>ggt :Git pull<CR>
 nmap <leader>ggd :Gvdiff<CR>
+nmap <leader>ggh <cmd>Telescope git_bcommits<cr>
 " }}}
 
 " netrw configuration
 let g:netrw_liststyle = 3
+
 let g:netrw_banner = 0
 let g:netrw_list_hide=netrw_gitignore#Hide()
 let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 let g:netrw_winsize = 25
 
 source $HOME/coc.nvim
-" CoC extensions
-let g:coc_global_extensions = ['coc-tsserver']
+
 " Remap keys for applying codeAction to the current line.
 nmap <leader>ac  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
