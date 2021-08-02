@@ -104,27 +104,35 @@ inoremap jj <esc>
 " {{{ PLUGINS
 call plug#begin('~/.vim/plugged')
 
+" Core
 Plug 'tpope/vim-sensible'
-Plug 'morhetz/gruvbox'
 " Press - in any buffer to hop up to the directory listing and seek to the file you just came from. Keep bouncing to go up, up, up. Having rapid directory access available changes everything.
 Plug 'tpope/vim-vinegar'
 " Smart tab detection
 Plug 'tpope/vim-sleuth'
-Plug 'tpope/vim-obsession'
-Plug 'neoclide/coc.nvim', " {'branch': 'release'}
-Plug 'jiangmiao/auto-pairs'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-fugitive'
-Plug 'mkitt/tabline.vim'
 
+" Appearance
+Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'vim-syntastic/syntastic'
+Plug 'mkitt/tabline.vim'
+Plug 'ryanoasis/vim-devicons'
+
+" Editing
+Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdcommenter'
+
+" Tools
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-obsession'
+Plug 'neoclide/coc.nvim', " {'branch': 'release'}
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'vim-syntastic/syntastic'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 
+" Lang specific
 Plug 'pangloss/vim-javascript'    " JavaScript support
 Plug 'leafgarland/typescript-vim' " TypeScript syntax
 Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
