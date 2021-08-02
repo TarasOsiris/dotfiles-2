@@ -49,8 +49,8 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " Enter command mode immediately
 nnoremap ; :
-
 " easier beginning and end of line
+
 nnoremap L $
 nnoremap H ^
 
@@ -148,6 +148,11 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
 Plug 'mkitt/tabline.vim'
 
+" fzf
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+
 " Telescope
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
@@ -179,12 +184,12 @@ let g:gruvbox_invert_selection='0'
 colorscheme gruvbox
 " }}}
 
-" {{{ TELESCOPE
-nnoremap <leader>n <cmd>Telescope git_files<cr>
-nnoremap <leader>p <cmd>Telescope find_files<cr>
-nnoremap <leader>f <cmd>Telescope live_grep<cr>
-nnoremap <leader>ee <cmd>Telescope buffers<cr>
-nnoremap <leader>rr <cmd>Telescope command_history<cr>
+" {{{ FUZZY FINDER
+nnoremap <leader>n :GFiles<CR>
+nnoremap <leader>p :Files<CR>
+nnoremap <leader>f :Ag<CR>
+nnoremap <leader>ee :Buffers<CR>
+nnoremap <leader>rr :History:<CR>
 " }}}
 
 " {{{ FUGITIVE
