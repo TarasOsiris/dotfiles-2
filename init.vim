@@ -41,6 +41,7 @@ augroup END
 
 " LEADER
 let mapleader = " "
+nnoremap <leader>nh :nohlsearch<cr>
 
 " {{{ REMAPS
 " Edit ~/.vimrc
@@ -49,8 +50,8 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " Enter command mode immediately
 nnoremap ; :
-" easier beginning and end of line
 
+" easier beginning and end of line
 nnoremap L $
 nnoremap H ^
 
@@ -118,7 +119,6 @@ nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 " }}}
 
-
 " {{{ PLUGINS
 call plug#begin('~/.vim/plugged')
 
@@ -173,7 +173,6 @@ Plug 'mattn/emmet-vim'
 call plug#end()
 " }}}
 
-
 " {{{ GRUVBOX CONFIG MAGICK
 let g:gruvbox_contrast_dark = 'hard'
 if exists('+termguicolors')
@@ -185,7 +184,7 @@ colorscheme gruvbox
 " }}}
 
 " {{{ FUZZY FINDER
-nnoremap <leader>n :GFiles<CR>
+nnoremap <leader>nn :GFiles<CR>
 nnoremap <leader>p :Files<CR>
 nnoremap <leader>f :Ag<CR>
 nnoremap <leader>ee :Buffers<CR>
