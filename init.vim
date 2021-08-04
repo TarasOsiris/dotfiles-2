@@ -193,10 +193,11 @@ nnoremap <leader>rr :History:<CR>
 
 " {{{ FUGITIVE
 nmap <leader>ggs <cmd>Telescope git_status<cr>
-nmap <leader>ggc :Git<cr>
+nmap <leader>ggc <cmd>Telescope git_commits<cr>
+nmap <leader>ggh <cmd>Telescope git_bcommits<cr>
+nmap <leader>ggg :Git<cr>
 nmap <leader>ggt :Git pull<CR>
 nmap <leader>ggd :Gvdiff<CR>
-nmap <leader>ggh <cmd>Telescope git_bcommits<cr>
 " }}}
 
 " netrw configuration
