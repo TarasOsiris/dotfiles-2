@@ -184,7 +184,6 @@ let g:gruvbox_invert_selection='0'
 colorscheme gruvbox
 " }}}
 
-
 " {{{ FUZZY FINDER
 nnoremap <leader>n :GFiles<CR>
 nnoremap <leader>p :Files<CR>
@@ -251,3 +250,6 @@ set path+=**
 set wildmenu
 
 let g:airline_theme='badwolf'
+
+" Scrolling in fzf preview window
+let $FZF_DEFAULT_OPTS="--bind \"ctrl-d:preview-half-page-down,ctrl-u:preview-half-page-up\""

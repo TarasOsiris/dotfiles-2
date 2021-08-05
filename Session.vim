@@ -13,9 +13,10 @@ badd +1 Session.vim
 badd +1 aliases.sh
 badd +1 coc.nvim
 badd +1 init.sh
-badd +21 init.vim
+badd +254 init.vim
 badd +1 setup.sh
 badd +1 .gitignored
+badd +24 .zshrc
 argglobal
 %argdel
 $argadd README.md
@@ -31,21 +32,21 @@ if bufexists("init.vim") | buffer init.vim | else | edit init.vim | endif
 if &buftype ==# 'terminal'
   silent file init.vim
 endif
-balt README.md
+balt .zshrc
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
-setlocal fdl=1
+setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 194 - ((1 * winheight(0) + 26) / 53)
+let s:l = 253 - ((49 * winheight(0) + 26) / 53)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 194
-normal! 019|
+keepjumps 253
+normal! 0
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0&& getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
