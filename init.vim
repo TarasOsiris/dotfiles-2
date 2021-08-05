@@ -191,7 +191,7 @@ nnoremap <leader>p :Files<CR>
 nnoremap <leader>f :Ag<CR>
 nnoremap <leader>e :Buffers<CR>
 " Command history
-nnoremap <leader>rr :History:<CR>
+nnoremap <leader>r :History:<CR>
 " }}}
 
 " {{{ FUGITIVE
@@ -205,7 +205,6 @@ nmap <leader>ggd :Gvdiff<CR>
 
 " netrw configuration
 let g:netrw_liststyle = 3
-
 let g:netrw_banner = 0
 let g:netrw_list_hide=netrw_gitignore#Hide()
 let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
@@ -223,9 +222,6 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-
-" Symbol renaming.
-nmap <leader>rn <Plug>(coc-rename)
 
 " Formatting selected/all code.
 xmap <leader>gs  <Plug>(coc-format-selected)
