@@ -11,9 +11,9 @@ set shortmess=aoO
 badd +1 README.md
 badd +1 Session.vim
 badd +1 aliases.sh
-badd +1 coc.nvim
+badd +170 coc.nvim
 badd +1 init.sh
-badd +254 init.vim
+badd +253 init.vim
 badd +1 setup.sh
 badd +1 .gitignored
 badd +24 .zshrc
@@ -26,13 +26,13 @@ $argadd coc.nvim
 $argadd init.sh
 $argadd init.vim
 $argadd setup.sh
-edit init.vim
+edit coc.nvim
 argglobal
-if bufexists("init.vim") | buffer init.vim | else | edit init.vim | endif
+if bufexists("coc.nvim") | buffer coc.nvim | else | edit coc.nvim | endif
 if &buftype ==# 'terminal'
-  silent file init.vim
+  silent file coc.nvim
 endif
-balt .zshrc
+balt init.vim
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -41,12 +41,12 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 253 - ((49 * winheight(0) + 26) / 53)
+let s:l = 170 - ((44 * winheight(0) + 26) / 53)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 253
-normal! 0
+keepjumps 170
+normal! 02|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0&& getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

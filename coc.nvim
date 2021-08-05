@@ -163,3 +163,20 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 " nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 " nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+
+" Source:
+" https://thoughtbot.com/blog/modern-typescript-and-react-development-in-vim
+" I prefer a more automatic behavior where when cursoring over a word, I see either the diagnostic if it exists, otherwise the documentation.
+function! ShowDocIfNoDiagnostic(timer_id)
+  if (coc#float#has_float() == 0 && CocHasProvider('hover') == 1)
+    silent call CocActionAsync('doHover')
+  endif
+endfunction
+
+function! s:show_hover_doc()
+  call timer_start(1500, 'ShowDocIfNoDiagnostic')
+endfunction
+
+autocmd CursorHoldI * :call <SID>show_hover_doc()
+autocmd CursorHold * :call <SID>show_hover_doc()

@@ -170,6 +170,8 @@ Plug 'pangloss/vim-javascript'    " JavaScript support
 Plug 'leafgarland/typescript-vim' " TypeScript syntax
 Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
 Plug 'mattn/emmet-vim'
+Plug 'neoclide/coc-eslint'
+Plug 'neoclide/coc-prettier'
 
 call plug#end()
 " }}}
