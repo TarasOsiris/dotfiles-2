@@ -161,6 +161,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-syntastic/syntastic'
+Plug 'kyazdani42/nvim-web-devicons'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 
@@ -183,12 +184,13 @@ let g:gruvbox_invert_selection='0'
 colorscheme gruvbox
 " }}}
 
+
 " {{{ FUZZY FINDER
-nnoremap <leader>t :Telescope fd prompt_prefix=🔍 previwer=false<cr>
 nnoremap <leader>n :GFiles<CR>
 nnoremap <leader>p :Files<CR>
 nnoremap <leader>f :Ag<CR>
 nnoremap <leader>e :Buffers<CR>
+" Command history
 nnoremap <leader>rr :History:<CR>
 " }}}
 
