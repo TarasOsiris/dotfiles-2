@@ -39,13 +39,13 @@ augroup filetype_vim
 augroup END
 " }}}
 
-" LEADER
+" LEADER (action-remove-highlighting)
 let mapleader = " "
-nnoremap <leader>nh :nohlsearch<cr>
+nnoremap <leader>ah :nohlsearch<cr>
 
 " {{{ REMAPS
 " Edit ~/.vimrc
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>av :tabedit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " Enter command mode immediately
@@ -111,7 +111,7 @@ noremap <leader>0 :tablast<cr>
 " }}}
 
 " WINDOWS {{{
-nnoremap <leader>q :wincmd q<CR>
+nnoremap <leader>qq :wincmd q<CR>
 
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
@@ -184,10 +184,11 @@ colorscheme gruvbox
 " }}}
 
 " {{{ FUZZY FINDER
-nnoremap <leader>nn :GFiles<CR>
+nnoremap <leader>t :Telescope fd prompt_prefix=🔍 previwer=false<cr>
+nnoremap <leader>n :GFiles<CR>
 nnoremap <leader>p :Files<CR>
 nnoremap <leader>f :Ag<CR>
-nnoremap <leader>ee :Buffers<CR>
+nnoremap <leader>e :Buffers<CR>
 nnoremap <leader>rr :History:<CR>
 " }}}
 
@@ -213,7 +214,8 @@ source $HOME/coc.nvim
 " Remap keys for applying codeAction to the current line.
 nmap <leader>ac  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
-nmap <leader>qf  <Plug>(coc-fix-current)
+nmap <leader>af  <Plug>(coc-fix-current)
+
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
