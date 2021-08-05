@@ -111,7 +111,7 @@ noremap <leader>0 :tablast<cr>
 " }}}
 
 " WINDOWS {{{
-nnoremap <leader>qq :wincmd q<CR>
+nnoremap <leader>w :wincmd q<CR>
 
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
