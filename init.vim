@@ -214,6 +214,7 @@ source $HOME/coc.nvim
 
 " Remap keys for applying codeAction to the current line.
 nmap <leader>ac <Plug>(coc-codeaction)
+nmap <leader>ai :call CocAction('doHover')<CR>
 " Apply AutoFix to problem on the current line.
 nmap <leader>af <Plug>(coc-fix-current)
 

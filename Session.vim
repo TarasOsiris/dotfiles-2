@@ -11,9 +11,9 @@ set shortmess=aoO
 badd +1 README.md
 badd +1 Session.vim
 badd +1 aliases.sh
-badd +171 coc.nvim
+badd +185 coc.nvim
 badd +1 init.sh
-badd +198 init.vim
+badd +199 init.vim
 badd +1 setup.sh
 badd +1 .gitignored
 badd +24 .zshrc
@@ -45,12 +45,12 @@ setlocal fen
 normal! zo
 197
 normal! zo
-let s:l = 218 - ((61 * winheight(0) + 26) / 53)
+let s:l = 217 - ((56 * winheight(0) + 26) / 53)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 218
-normal! 017|
+keepjumps 217
+normal! 046|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0&& getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
