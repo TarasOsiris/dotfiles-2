@@ -204,6 +204,7 @@ nmap <leader>ggd :Gvdiff<CR>
 " }}}
 
 " Fugitive configuration
+" Also show the commit author
 let g:fugitive_summary_format = "%<(32,trunc)%an || %s"
 
 " netrw configuration

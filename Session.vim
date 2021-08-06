@@ -13,7 +13,7 @@ badd +1 Session.vim
 badd +1 aliases.sh
 badd +185 coc.nvim
 badd +1 init.sh
-badd +199 init.vim
+badd +217 init.vim
 badd +1 setup.sh
 badd +1 .gitignored
 badd +24 .zshrc
@@ -43,14 +43,12 @@ setlocal fdn=20
 setlocal fen
 122
 normal! zo
-197
-normal! zo
-let s:l = 217 - ((56 * winheight(0) + 26) / 53)
+let s:l = 217 - ((52 * winheight(0) + 30) / 60)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 217
-normal! 046|
+normal! 018|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0&& getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
