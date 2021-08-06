@@ -145,7 +145,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-obsession'
 Plug 'neoclide/coc.nvim', " {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
-Plug 'tpope/vim-fugitive'
 Plug 'mkitt/tabline.vim'
 
 " fzf
@@ -198,10 +197,14 @@ nnoremap <leader>r :History:<CR>
 nmap <leader>ggs <cmd>Telescope git_status<cr>
 nmap <leader>ggc :Commits!<cr>
 nmap <leader>ggh :BCommits!<cr>
+nmap <leader>ggl :Gclog<cr>
 nmap <leader>ggg :Git<cr>
 nmap <leader>ggt :Git pull<CR>
 nmap <leader>ggd :Gvdiff<CR>
 " }}}
+
+" Fugitive configuration
+let g:fugitive_summary_format = "%<(32,trunc)%an || %s"
 
 " netrw configuration
 let g:netrw_liststyle = 3
