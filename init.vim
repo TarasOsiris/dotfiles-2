@@ -14,7 +14,6 @@ set tabstop=4
 set shiftwidth=4
 set nowrap
 set cursorline
-
 set noerrorbells
 set showmode
 set encoding=UTF-8
@@ -41,6 +40,8 @@ augroup END
 
 " LEADER (action-remove-highlighting)
 let mapleader = " "
+
+" Remove search highlighting
 nnoremap <leader>ah :nohlsearch<cr>
 
 " {{{ REMAPS
@@ -143,6 +144,7 @@ Plug 'preservim/nerdcommenter'
 " Tools
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-obsession'
+Plug 'vim-syntastic/syntastic'
 Plug 'neoclide/coc.nvim', " {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'mkitt/tabline.vim'
@@ -156,12 +158,6 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'vim-syntastic/syntastic'
-Plug 'kyazdani42/nvim-web-devicons'
-
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 
 " Lang specific
 Plug 'pangloss/vim-javascript'    " JavaScript support
