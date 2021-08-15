@@ -41,9 +41,6 @@ augroup END
 " LEADER (action-remove-highlighting)
 let mapleader = " "
 
-" Remove search highlighting
-nnoremap <leader>ah :nohlsearch<cr>
-
 " {{{ REMAPS
 " Edit ~/.vimrc
 nnoremap <leader>av :tabedit $MYVIMRC<cr>
