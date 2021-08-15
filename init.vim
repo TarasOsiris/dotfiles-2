@@ -41,6 +41,9 @@ augroup END
 " LEADER (action-remove-highlighting)
 let mapleader = " "
 
+" Unfold on enter
+autocmd FileType * exe "normal zR"
+
 " {{{ REMAPS
 " Edit ~/.vimrc
 nnoremap <leader>av :tabedit $MYVIMRC<cr>
