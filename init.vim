@@ -197,11 +197,11 @@ nmap <leader>ggl :Gclog<cr>
 nmap <leader>ggg :Git<cr>
 nmap <leader>ggt :Git pull<CR>
 nmap <leader>ggd :Gvdiff<CR>
-" }}}
 
 " Fugitive configuration
 " Also show the commit author
 let g:fugitive_summary_format = "%<(32,trunc)%an || %s"
+" }}}
 
 " netrw configuration
 let g:netrw_liststyle = 3
@@ -210,10 +210,12 @@ let g:netrw_list_hide=netrw_gitignore#Hide()
 let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 let g:netrw_winsize = 25
 
+" {{{ COC
 source $HOME/coc.nvim
 
 " Remap keys for applying codeAction to the current line.
 nmap <leader>ac <Plug>(coc-codeaction)
+" Show info popup
 nmap <leader>ai :call CocAction('doHover')<CR>
 " Apply AutoFix to problem on the current line.
 nmap <leader>af <Plug>(coc-fix-current)
@@ -229,6 +231,7 @@ xmap <leader>gs  <Plug>(coc-format-selected)
 nmap <leader>gs  <Plug>(coc-format-selected)
 xmap <leader>ga  :Format<CR>
 nmap <leader>ga  :Format<CR>
+" }}}
 
 " Syntastic default recommended settings
 set statusline+=%#warningmsg#
@@ -240,6 +243,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_yaml_checkers = [ "yamllint" ]
+
 let g:syntastic_ignore_files = [ "\.java$" ]
 
 " FINDING FILES
