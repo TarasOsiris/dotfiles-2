@@ -128,6 +128,7 @@ Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-sleuth'
 
 " Appearance
+Plug 'sheerun/vim-polyglot'
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -139,6 +140,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdcommenter'
 
 " Tools
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-obsession'
 Plug 'vim-syntastic/syntastic'
@@ -154,7 +156,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-
+Plug 'fannheyward/telescope-coc.nvim'
 
 " Lang specific
 Plug 'pangloss/vim-javascript'    " JavaScript support
@@ -166,6 +168,27 @@ Plug 'neoclide/coc-prettier'
 
 call plug#end()
 " }}}
+
+lua << EOF
+require('telescope').load_extension('coc')
+require('telescope').setup{
+  defaults = {
+    layout_strategy = "horizontal"
+  }
+}
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true,
+  },
+  indent = {
+    enable = true
+  }
+}
+EOF
+
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
+
 
 " {{{ GRUVBOX CONFIG MAGICK
 let g:gruvbox_contrast_dark = 'hard'
@@ -221,7 +244,7 @@ nmap <leader>af <Plug>(coc-fix-current)
 nmap <silent>gd <Plug>(coc-definition)
 nmap <silent>gy <Plug>(coc-type-definition)
 nmap <silent>gi <Plug>(coc-implementation)
-nmap <silent>gr <Plug>(coc-references)
+nmap <silent>gr <cmd>Telescope coc references<cr>
 
 " Formatting selected/all code.
 xmap <leader>gs <Plug>(coc-format-selected)
@@ -241,7 +264,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_yaml_checkers = [ "yamllint" ]
 
-let g:syntastic_ignore_files = [ "\.java$" ]
+let g:syntastic_ignore_files = [ "\.java$", "\.html$" ]
 
 " FINDING FILES
 "
