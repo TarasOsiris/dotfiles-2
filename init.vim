@@ -221,16 +221,16 @@ nmap <leader>ai :call CocAction('doHover')<CR>
 nmap <leader>af <Plug>(coc-fix-current)
 
 " GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+nmap <silent>gd <Plug>(coc-definition)
+nmap <silent>gy <Plug>(coc-type-definition)
+nmap <silent>gi <Plug>(coc-implementation)
+nmap <silent>gr <Plug>(coc-references)
 
 " Formatting selected/all code.
-xmap <leader>gs  <Plug>(coc-format-selected)
-nmap <leader>gs  <Plug>(coc-format-selected)
-xmap <leader>ga  :Format<CR>
-nmap <leader>ga  :Format<CR>
+xmap <leader>gs <Plug>(coc-format-selected)
+nmap <leader>gs <Plug>(coc-format-selected)
+xmap <leader>ga :Format<CR>
+nmap <leader>ga :Format<CR>
 " }}}
 
 " Syntastic default recommended settings
