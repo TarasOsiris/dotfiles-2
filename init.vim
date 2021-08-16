@@ -113,6 +113,8 @@ nmap <leader>0 <Plug>BuffetSwitch(10)
 
 " WINDOWS {{{
 nnoremap <leader>w :wincmd q<CR>
+" Close current buffer without closing the window (from buffet plugin)
+nnoremap <leader>x :Bw<CR>
 
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
