@@ -68,3 +68,5 @@ ln -s $HOME/dotfiles/.gitignored $HOME/.gitignored
 
 rm -f $HOME/.config/yakuakerc
 ln -s $HOME/dotfiles/.config/yakuakerc $HOME/.config/yakuakerc
+
+git config --global core.excludesFile $HOME/dotfiles/.gitignored
