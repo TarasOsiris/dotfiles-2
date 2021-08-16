@@ -139,12 +139,12 @@ Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-sleuth'
 
 " Appearance
+Plug 'ryanoasis/vim-devicons'
 Plug 'sheerun/vim-polyglot'
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'bagrat/vim-buffet'
-Plug 'ryanoasis/vim-devicons'
 
 " Editing
 Plug 'jiangmiao/auto-pairs'
@@ -202,9 +202,6 @@ set foldexpr=nvim_treesitter#foldexpr()
 
 " Buffet tabs plugin
 let g:buffet_show_index = 1
-let g:buffet_tab_icon = "\uf00a"
-let g:buffet_left_trunc_icon = "\uf0a8"
-let g:buffet_right_trunc_icon = "\uf0a9"
 
 " {{{ GRUVBOX CONFIG MAGICK
 let g:gruvbox_contrast_dark = 'hard'
