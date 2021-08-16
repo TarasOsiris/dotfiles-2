@@ -243,6 +243,7 @@ nmap <leader>ac <Plug>(coc-codeaction)
 nmap <leader>ai :call CocAction('doHover')<CR>
 " Apply AutoFix to problem on the current line.
 nmap <leader>af <Plug>(coc-fix-current)
+nmap <leader>ar <Plug>(coc-rename)
 
 " GoTo code navigation.
 nmap <silent>gd <Plug>(coc-definition)
