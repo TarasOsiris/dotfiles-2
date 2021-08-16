@@ -99,16 +99,16 @@ inoremap kj <esc>
 
 " TABS {{{
 " Go to tab by number
-noremap <leader>1 1gt
-noremap <leader>2 2gt
-noremap <leader>3 3gt
-noremap <leader>4 4gt
-noremap <leader>5 5gt
-noremap <leader>6 6gt
-noremap <leader>7 7gt
-noremap <leader>8 8gt
-noremap <leader>9 9gt
-noremap <leader>0 :tablast<cr>
+nmap <leader>1 <Plug>BuffetSwitch(1)
+nmap <leader>2 <Plug>BuffetSwitch(2)
+nmap <leader>3 <Plug>BuffetSwitch(3)
+nmap <leader>4 <Plug>BuffetSwitch(4)
+nmap <leader>5 <Plug>BuffetSwitch(5)
+nmap <leader>6 <Plug>BuffetSwitch(6)
+nmap <leader>7 <Plug>BuffetSwitch(7)
+nmap <leader>8 <Plug>BuffetSwitch(8)
+nmap <leader>9 <Plug>BuffetSwitch(9)
+nmap <leader>0 <Plug>BuffetSwitch(10)
 " }}}
 
 " WINDOWS {{{
@@ -119,6 +119,14 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 " }}}
+
+" Buffet tabs
+" Note: Make sure the function is defined before `vim-buffet` is loaded.
+function! g:BuffetSetCustomColors()
+  hi! BuffetCurrentBuffer cterm=NONE ctermbg=10 ctermfg=0 guibg=#00FF00 guifg=#000000
+  hi! BuffetBuffer cterm=NONE ctermbg=8 ctermfg=0 guibg=#00FF00 guifg=#000000
+  hi! BuffetTab cterm=NONE ctermbg=8 ctermfg=0 guibg=#00FF00 guifg=#000000
+endfunction
 
 " {{{ PLUGINS
 call plug#begin('~/.vim/plugged')
@@ -135,7 +143,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'mkitt/tabline.vim'
+Plug 'bagrat/vim-buffet'
 Plug 'ryanoasis/vim-devicons'
 
 " Editing
@@ -149,7 +157,6 @@ Plug 'tpope/vim-obsession'
 Plug 'vim-syntastic/syntastic'
 Plug 'neoclide/coc.nvim', " {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
-Plug 'mkitt/tabline.vim'
 
 " fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -193,6 +200,11 @@ EOF
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
 
+" Buffet tabs plugin
+let g:buffet_show_index = 1
+let g:buffet_tab_icon = "\uf00a"
+let g:buffet_left_trunc_icon = "\uf0a8"
+let g:buffet_right_trunc_icon = "\uf0a9"
 
 " {{{ GRUVBOX CONFIG MAGICK
 let g:gruvbox_contrast_dark = 'hard'
