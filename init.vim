@@ -228,7 +228,7 @@ nnoremap <leader>r :History:<CR>
 " {{{ FUGITIVE
 nmap <leader>ggs <cmd>Telescope git_status<cr>
 nmap <leader>ggc :Commits!<cr>
-nmap <leader>ggh :BCommits!<cr>
+nmap <leader>ggh :Telescope git_bcommits<cr>
 nmap <leader>ggl :Gclog<cr>
 nmap <leader>ggg :Git<cr>
 nmap <leader>ggt :Git pull<CR>
