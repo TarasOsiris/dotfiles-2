@@ -139,6 +139,7 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-vinegar'
 " Smart tab detection
 Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-eunuch'
 
 " Appearance
 Plug 'ryanoasis/vim-devicons'

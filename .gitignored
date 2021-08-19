@@ -3,4 +3,5 @@
 .vscode
 Thumbs.db
 .idea
+.vim
 Session.vim
