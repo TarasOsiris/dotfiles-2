@@ -141,7 +141,6 @@ Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
 
 " Appearance
 Plug 'ryanoasis/vim-devicons'
@@ -228,11 +227,11 @@ nnoremap <leader>r :History:<CR>
 " }}}
 
 " {{{ FUGITIVE
+nmap <leader>ggg :Git<cr>
 nmap <leader>ggs <cmd>Telescope git_status<cr>
 nmap <leader>ggc :Commits!<cr>
 nmap <leader>ggh :Telescope git_bcommits<cr>
 nmap <leader>ggl :Gclog<cr>
-nmap <leader>ggg :Git<cr>
 nmap <leader>ggt :Git pull<CR>
 nmap <leader>ggd :Gvdiff<CR>
 
