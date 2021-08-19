@@ -233,6 +233,7 @@ nmap <leader>ggc :Commits!<cr>
 nmap <leader>ggh :Telescope git_bcommits<cr>
 nmap <leader>ggl :Gclog<cr>
 nmap <leader>ggt :Git pull<CR>
+nmap <leader>ggp :Git push<CR>
 nmap <leader>ggd :Gvdiff<CR>
 
 " Fugitive configuration

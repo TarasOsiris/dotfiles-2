@@ -4,4 +4,4 @@
 [pull]
 	rebase = false
 [core]
-	excludesFile = /home/taras/dotfiles/.gitignored
+	excludesfile = /Users/taras/.gitignored
