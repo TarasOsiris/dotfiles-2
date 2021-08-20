@@ -283,7 +283,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_yaml_checkers = [ "yamllint" ]
 
-let g:syntastic_ignore_files = [ "\.java$", "\.html$" ]
+let g:syntastic_ignore_files = [ "\.java$", "\.html$", "\.cpp$" ]
 
 " FINDING FILES
 "
