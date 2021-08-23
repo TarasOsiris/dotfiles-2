@@ -5,7 +5,7 @@ set listchars=tab:>-,trail:~,extends:>,precedes:<,space:.
 set list
 
 if (!has("win32"))
-  set shell=/bin/zsh
+	set shell=/bin/zsh
 endif
 
 set smartindent
@@ -33,16 +33,21 @@ set background=dark
 
 " Vimscript file settings ---------------------- {{{
 augroup filetype_vim
-  autocmd!
-  autocmd FileType vim setlocal foldmethod=marker
+	autocmd!
+	autocmd FileType vim setlocal foldmethod=marker
 augroup END
+
+" Reindent on write
+autocmd BufWritePre *.vim :normal gg=G
 " }}}
 
 " LEADER (action-remove-highlighting)
 let mapleader = " "
 
+" AUTOCOMMANDS ---------------------- {{{
 " Unfold on enter
 autocmd FileType * exe "normal zR"
+" }}}
 
 " {{{ REMAPS
 " Edit ~/.vimrc
@@ -125,9 +130,9 @@ nnoremap <leader>l :wincmd l<CR>
 " Buffet tabs
 " Note: Make sure the function is defined before `vim-buffet` is loaded.
 function! g:BuffetSetCustomColors()
-  hi! BuffetCurrentBuffer cterm=NONE ctermbg=10 ctermfg=0 guibg=#00FF00 guifg=#000000
-  hi! BuffetBuffer cterm=NONE ctermbg=8 ctermfg=0 guibg=#00FF00 guifg=#000000
-  hi! BuffetTab cterm=NONE ctermbg=8 ctermfg=0 guibg=#00FF00 guifg=#000000
+	hi! BuffetCurrentBuffer cterm=NONE ctermbg=10 ctermfg=0 guibg=#00FF00 guifg=#000000
+	hi! BuffetBuffer cterm=NONE ctermbg=8 ctermfg=0 guibg=#00FF00 guifg=#000000
+	hi! BuffetTab cterm=NONE ctermbg=8 ctermfg=0 guibg=#00FF00 guifg=#000000
 endfunction
 
 " {{{ PLUGINS
@@ -187,8 +192,8 @@ lua << EOF
 require('telescope').load_extension('coc')
 require('telescope').setup{
 defaults = {
-  layout_strategy = "horizontal"
-  }
+	layout_strategy = "horizontal"
+	}
 }
 require'nvim-treesitter.configs'.setup {
 ensure_installed = "maintained",
@@ -210,8 +215,8 @@ let g:buffet_show_index = 1
 " {{{ GRUVBOX CONFIG MAGICK
 let g:gruvbox_contrast_dark = 'hard'
 if exists('+termguicolors')
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+	let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+	let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
 let g:gruvbox_invert_selection='0'
 colorscheme gruvbox
