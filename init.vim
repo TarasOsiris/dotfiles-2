@@ -5,7 +5,7 @@ set listchars=tab:>-,trail:~,extends:>,precedes:<,space:.
 set list
 
 if (!has("win32"))
-    set shell=/bin/zsh
+  set shell=/bin/zsh
 endif
 
 set smartindent
@@ -33,8 +33,8 @@ set background=dark
 
 " Vimscript file settings ---------------------- {{{
 augroup filetype_vim
-    autocmd!
-    autocmd FileType vim setlocal foldmethod=marker
+  autocmd!
+  autocmd FileType vim setlocal foldmethod=marker
 augroup END
 " }}}
 
@@ -186,17 +186,17 @@ call plug#end()
 lua << EOF
 require('telescope').load_extension('coc')
 require('telescope').setup{
-  defaults = {
-    layout_strategy = "horizontal"
+defaults = {
+  layout_strategy = "horizontal"
   }
 }
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = "maintained",
-  highlight = {
-    enable = true,
-  },
+ensure_installed = "maintained",
+highlight = {
+enable = true,
+},
   indent = {
-    enable = true
+  enable = true
   }
 }
 EOF
@@ -210,8 +210,8 @@ let g:buffet_show_index = 1
 " {{{ GRUVBOX CONFIG MAGICK
 let g:gruvbox_contrast_dark = 'hard'
 if exists('+termguicolors')
-    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
 let g:gruvbox_invert_selection='0'
 colorscheme gruvbox
