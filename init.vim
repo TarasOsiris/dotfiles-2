@@ -8,7 +8,7 @@ if (!has("win32"))
 	set shell=/bin/zsh
 endif
 
-set smartindent
+"set smartindent
 set noexpandtab
 set tabstop=4
 set shiftwidth=4
@@ -159,9 +159,11 @@ Plug 'bagrat/vim-buffet'
 Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdcommenter'
 
+
 " Tools
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 Plug 'tpope/vim-fugitive'
+Plug 'ThePrimeagen/git-worktree.nvim'
 Plug 'tpope/vim-obsession'
 Plug 'vim-syntastic/syntastic'
 Plug 'neoclide/coc.nvim', " {'branch': 'release'}
@@ -303,3 +305,10 @@ let g:airline_theme='badwolf'
 
 " Scrolling in fzf preview window
 let $FZF_DEFAULT_OPTS="--bind \"ctrl-d:preview-half-page-down,ctrl-u:preview-half-page-up\""
+
+
+" {{{ ABBREVIATIONS
+:autocmd FileType javascript,typescript :iabbrev <buffer> ret return ;<left><BS>
+:autocmd FileType javascript,typescript :iabbrev <buffer> fun function() {}<left><CR>
+:autocmd FileType javascript,typescript :iabbrev log console.log();<Left><Left>
+" }}}
