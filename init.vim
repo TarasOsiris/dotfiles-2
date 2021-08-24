@@ -192,6 +192,7 @@ call plug#end()
 
 lua << EOF
 require('telescope').load_extension('coc')
+require("telescope").load_extension("git_worktree")
 require('telescope').setup{
 defaults = {
 	layout_strategy = "horizontal"
