@@ -77,6 +77,9 @@ vnoremap K :m '<-2<CR>gv=gv
 nnoremap <C-j> :m .+1<CR>==
 nnoremap <C-k> :m .-2<CR>==
 
+" Replace word
+nnoremap <leader>P viwp 
+
 " newline in normal mode
 nmap <CR><CR> o<esc>
 
