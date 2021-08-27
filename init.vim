@@ -56,6 +56,8 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " Enter command mode immediately
 nnoremap ; :
+" And fix to allow repeat previous f, t, F or T movement
+nnoremap : ;
 
 " easier beginning and end of line
 nnoremap L $
