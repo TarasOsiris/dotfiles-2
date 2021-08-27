@@ -95,6 +95,7 @@ inoremap kj <esc>
 
 " change in (
 :onoremap p i(
+:onoremap ap a(
 :onoremap b i{
 :onoremap ab a{
 
