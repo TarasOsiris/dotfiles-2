@@ -54,11 +54,6 @@ autocmd FileType * exe "normal zR"
 nnoremap <leader>av :tabedit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
-" Enter command mode immediately
-nnoremap ; :
-" And fix to allow repeat previous f, t, F or T movement
-nnoremap : ;
-
 " easier beginning and end of line
 nnoremap L $
 nnoremap H ^
@@ -165,7 +160,6 @@ Plug 'bagrat/vim-buffet'
 Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdcommenter'
 
-
 " Tools
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 Plug 'tpope/vim-fugitive'
@@ -236,7 +230,6 @@ nnoremap <leader>n :GFiles<CR>
 nnoremap <leader>p :Files<CR>
 nnoremap <leader>f :Ag<CR>
 nnoremap <leader>e :Buffers<CR>
-" Command history
 nnoremap <leader>r :History:<CR>
 " }}}
 
