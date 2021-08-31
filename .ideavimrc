@@ -1,11 +1,16 @@
 source ~/dotfiles/init.vim
 
+" G-o to ...
 nmap gi :action GotoImplementation<CR>
 nmap gr :action FindUsages<CR>
 nmap gs :action GotoSuperMethod<CR>
 
+" A-ction
 nmap <leader>ar :action RenameElement<CR>
+nmap <leader>af :action ReformatCode<CR>
+nmap <leader>ai :action Inline<CR>
 
+" E-xtract
 nmap <leader>ea :action IntroduceActionsGroup<CR>
 nmap <leader>ep :action IntroduceParameter<CR>
 nmap <leader>ev :action IntroduceVariable<CR>
@@ -13,7 +18,6 @@ nmap <leader>ec :action IntroduceConstant<CR>
 :map <leader>ef <Action>(ExtractFunction)
 :map <leader>em <Action>(ExtractFunction)
 
-nmap <leader>ga :action ReformatCode<CR>
 
 set ideajoin
 set ideaput
