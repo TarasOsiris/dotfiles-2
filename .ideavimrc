@@ -8,6 +8,5 @@ nmap <leader>ea :action IntroduceActionsGroup<CR>
 nmap <leader>ep :action IntroduceParameter<CR>
 nmap <leader>ev :action IntroduceVariable<CR>
 nmap <leader>ec :action IntroduceConstant<CR>
-nmap <leader>em :action ExtractMethod<CR>
 
 nmap <leader>ga :action ReformatCode<CR>
