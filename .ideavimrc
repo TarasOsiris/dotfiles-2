@@ -18,6 +18,11 @@ nmap <leader>ec :action IntroduceConstant<CR>
 :map <leader>ef <Action>(ExtractFunction)
 :map <leader>em <Action>(ExtractFunction)
 
+" W-indow
+:map <leader>wp <Action>(ActivateProjectToolWindow)
+:map <leader>wg <Action>(ActivateVersionControlToolWindow)
+:map <leader>wl <Action>(ActivateLogcatToolWindow)
+
 
 set ideajoin
 set ideaput
