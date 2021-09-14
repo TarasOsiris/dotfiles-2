@@ -23,6 +23,8 @@ nmap <leader>ec :action IntroduceConstant<CR>
 :map <leader>wg <Action>(ActivateVersionControlToolWindow)
 :map <leader>wl <Action>(ActivateLogcatToolWindow)
 
+" GG-it
+:map <leader>ggh <Action>(Vcs.ShowTabbedFileHistory)
 
 set ideajoin
 set ideaput
