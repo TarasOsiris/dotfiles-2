@@ -17,7 +17,7 @@ nmap <leader>ep <Action> IntroduceParameter<CR>
 nmap <leader>ev <Action> IntroduceVariable<CR>
 nmap <leader>ec <Action> IntroduceConstant<CR>
 nmap <leader>ef <Action> ExtractFunction<CR>
-nmap <leader>em <Action> ExtractFunction<CR>
+nmap <leader>em <Action> ExtractMethod<CR>
 
 " W-indow
 nmap <leader>wp <Action>(ActivateProjectToolWindow)
