@@ -1,31 +1,31 @@
 source ~/dotfiles/init.vim
 
 " G-o to ...
-nmap gi :action GotoImplementation<CR>
-nmap gr :action FindUsages<CR>
-nmap gs :action GotoSuperMethod<CR>
+nmap gi <Action> GotoImplementation<CR>
+nmap gr <Action> FindUsages<CR>
+nmap gs <Action> GotoSuperMethod<CR>
 
 " A-ction
-nmap <leader>ar :action RenameElement<CR>
-nmap <leader>af :action ReformatCode<CR>
-nmap <leader>ai :action Inline<CR>
-nmap <leader>ax :action HideActiveWindow<CR>
+nmap <leader>ar <Action> RenameElement<CR>
+nmap <leader>af <Action> ReformatCode<CR>
+nmap <leader>ai <Action> Inline<CR>
+nmap <leader>ax <Action> HideActiveWindow<CR>
 
 " E-xtract
-nmap <leader>ea :action IntroduceActionsGroup<CR>
-nmap <leader>ep :action IntroduceParameter<CR>
-nmap <leader>ev :action IntroduceVariable<CR>
-nmap <leader>ec :action IntroduceConstant<CR>
-:map <leader>ef <Action>(ExtractFunction)
-:map <leader>em <Action>(ExtractFunction)
+nmap <leader>ea <Action> IntroduceActionsGroup<CR>
+nmap <leader>ep <Action> IntroduceParameter<CR>
+nmap <leader>ev <Action> IntroduceVariable<CR>
+nmap <leader>ec <Action> IntroduceConstant<CR>
+nmap <leader>ef <Action> ExtractFunction<CR>
+nmap <leader>em <Action> ExtractFunction<CR>
 
 " W-indow
-:map <leader>wp <Action>(ActivateProjectToolWindow)
-:map <leader>wg <Action>(ActivateVersionControlToolWindow)
-:map <leader>wl <Action>(ActivateLogcatToolWindow)
+nmap <leader>wp <Action>(ActivateProjectToolWindow)
+nmap <leader>wg <Action>(ActivateVersionControlToolWindow)
+nmap <leader>wl <Action>(ActivateLogcatToolWindow)
 
 " GG-it
-:map <leader>ggh <Action>(Vcs.ShowTabbedFileHistory)
+nextmap <leader>ggh <Action>(Vcs.ShowTabbedFileHistory)
 
 set ideajoin
 set ideaput
