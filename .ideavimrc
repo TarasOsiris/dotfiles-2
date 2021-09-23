@@ -1,4 +1,29 @@
-source ~/dotfiles/init.vim
+syntax on
+filetype plugin on
+
+set list
+set smartindent
+set noexpandtab
+set tabstop=4
+set shiftwidth=4
+set nowrap
+set cursorline
+set noerrorbells
+set showmode
+set encoding=UTF-8
+set nu
+set smartcase
+set noswapfile
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
+set incsearch
+set hls
+set showcmd
+set clipboard+=unnamedplus
+set relativenumber
+set ignorecase
+set background=dark
 
 " G-o to ...
 nmap gi :action GotoImplementation<CR>
@@ -31,4 +56,4 @@ map <leader>em :action ExtractMethod<CR>
 :map <leader>ggl <Action>(Vcs.UpdateProject)
 
 set ideajoin
-set ideaput
+" set ideaput
