@@ -86,18 +86,8 @@ inoremap jj <esc>
 inoremap jk <esc>
 inoremap kj <esc>
 
-"-------------------------------
-"-- OPERATOR PENDING MAPPINGS --
-"-------------------------------
-" https://learnvimscriptthehardway.stevelosh.com/chapters/15.html
-
-" change in (
-:onoremap p i(
-:onoremap b i{
-:onoremap ab a{
-
-" change in next (
 :onoremap in( :<c-u>normal! f(vi(<cr>
+" change in next (
 " change in prev (
 :onoremap il( :<c-u>normal! F)vi(<cr>
 " }}}

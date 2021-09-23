@@ -25,6 +25,24 @@ set relativenumber
 set ignorecase
 set background=dark
 
+let mapleader = " "
+
+" easier beginning and end of line
+nnoremap L $
+nnoremap H ^
+
+" Copy till the end of line
+nnoremap Y y$
+
+" Exit insert mode
+inoremap jj <esc>
+inoremap jk <esc>
+inoremap kj <esc>
+
+" ===============
+" INTELLIJ STUFF
+" ===============
+
 " G-o to ...
 nmap gi :action GotoImplementation<CR>
 nmap gr :action FindUsages<CR>
