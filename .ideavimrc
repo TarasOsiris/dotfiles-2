@@ -20,7 +20,6 @@ set undofile
 set incsearch
 set hls
 set showcmd
-set clipboard+=unnamedplus
 set relativenumber
 set ignorecase
 set background=dark
@@ -74,4 +73,7 @@ map <leader>em :action ExtractMethod<CR>
 :map <leader>ggl <Action>(Vcs.UpdateProject)
 
 set ideajoin
-" set ideaput
+set ideamarks
+
+set clipboard+=unnamed
+set clipboard+=unnamedplus
