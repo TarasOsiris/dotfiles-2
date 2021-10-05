@@ -71,6 +71,7 @@ map <leader>em :action ExtractMethod<CR>
 " GG-it
 :map <leader>ggh <Action>(Vcs.ShowTabbedFileHistory)
 :map <leader>ggl <Action>(Vcs.UpdateProject)
+:map <leader>ggc <Action>(ActivateCommitToolWindow)
 
 set ideajoin
 set ideamarks
