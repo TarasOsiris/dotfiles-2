@@ -252,7 +252,7 @@ nmap <leader>ac <Plug>(coc-codeaction)
 " Show info popup
 nmap <leader>ai :call CocAction('doHover')<CR>
 " Apply AutoFix to problem on the current line.
-nmap <leader>af <Plug>(coc-fix-current)
+nmap <leader>ax <Plug>(coc-fix-current)
 nmap <leader>ar <Plug>(coc-rename)
 
 " GoTo code navigation.
@@ -264,8 +264,8 @@ nmap <silent>gr <cmd>Telescope coc references<cr>
 " Formatting selected/all code.
 xmap <leader>gs <Plug>(coc-format-selected)
 nmap <leader>gs <Plug>(coc-format-selected)
-xmap <leader>ga :Format<CR>
-nmap <leader>ga :Format<CR>
+xmap <leader>af :Format<CR>
+nmap <leader>af :Format<CR>
 " }}}
 
 " Syntastic default recommended settings
