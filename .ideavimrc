@@ -53,6 +53,7 @@ nmap <leader>af :action ReformatCode<CR>
 nmap <leader>ai :action Inline<CR>
 nmap <leader>ax :action HideActiveWindow<CR>
 nmap <leader>as :action SelectInProjectView<CR>
+nmap <leader>ag :action Generate<CR>
 
 " E-xtract
 map <leader>ea :action IntroduceActionsGroup<CR>
