@@ -64,6 +64,7 @@ map <leader>ef :action ExtractFunction<CR>
 map <leader>em :action ExtractMethod<CR>
 
 " W-indow
+:map <leader>wq <Action>(HideActiveWindow)
 :map <leader>wp <Action>(ActivateProjectToolWindow)
 :map <leader>wg <Action>(ActivateVersionControlToolWindow)
 :map <leader>wl <Action>(ActivateLogcatToolWindow)
