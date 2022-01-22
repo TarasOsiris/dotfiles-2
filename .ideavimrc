@@ -91,3 +91,12 @@ nmap <leader>p "+p
 nmap <leader>P "+P
 vmap <leader>p "+p
 vmap <leader>P "+P
+
+
+" Quick copy-paste
+" Copy
+vmap <C-Space> "ay
+nmap <C-c> "ayiw
+" Paste
+nmap <C-Space> "aP
+imap <C-Space> <C-o>"ap
