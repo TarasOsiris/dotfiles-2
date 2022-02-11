@@ -4,5 +4,5 @@
 [pull]
 	rebase = false
 [core]
-	excludesFile = /home/taras/.gitignored
+	excludesFile = /Users/taras/.gitignored
 	autocrlf = input

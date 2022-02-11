@@ -34,7 +34,6 @@ nnoremap H ^
 nnoremap Y y$
 
 " Exit insert mode
-inoremap jj <esc>
 inoremap jk <esc>
 inoremap kj <esc>
 
