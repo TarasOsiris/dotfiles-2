@@ -82,7 +82,6 @@ nmap <CR><CR> o<esc>
 "-- INSERT MODE --
 "-----------------
 " Exit insert mode
-inoremap jj <esc>
 inoremap jk <esc>
 inoremap kj <esc>
 
