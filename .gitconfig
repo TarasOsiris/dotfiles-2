@@ -6,3 +6,5 @@
 [core]
 	excludesFile = /Users/taras/.gitignored
 	autocrlf = input
+[init]
+	defaultBranch = main

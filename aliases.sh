@@ -29,3 +29,4 @@ alias tmp='cd /tmp'
 
 # Dropbox
 alias db='cd ~/Dropbox'
+alias u='brew upgrade'

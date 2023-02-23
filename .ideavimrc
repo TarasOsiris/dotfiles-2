@@ -69,6 +69,8 @@ map <leader>em :action ExtractMethod<CR>
 :map <leader>wl <Action>(ActivateLogcatToolWindow)
 :map <leader>wt <Action>(ActivateTerminalToolWindow)
 
+:map <leader>b :action ShowTypeBookmarks<CR>
+
 " GG-it
 :map <leader>ggh <Action>(Vcs.ShowTabbedFileHistory)
 :map <leader>ggl <Action>(Vcs.UpdateProject)
